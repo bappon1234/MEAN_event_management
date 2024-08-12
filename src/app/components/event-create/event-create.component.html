@@ -1,0 +1,33 @@
+
+<html lang="en">
+<body>
+  <div class="background-container">
+    <div class="form-container">
+      <h2>Create Event</h2>
+      <form (submit)="createEvent()">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" [(ngModel)]="event.tittle" name="title" required>
+        </div>
+        <div>
+          <label for="description">Description:</label>
+          <textarea id="description" [(ngModel)]="event.description" name="description" required></textarea>
+        </div>
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" [(ngModel)]="event.date" name="date" required>
+        </div>
+        <div>
+          <label for="location">Location:</label>
+          <input type="text" id="location" [(ngModel)]="event.location" name="location" required>
+        </div>
+        <div>
+          <label for="ticketsAvailable">Tickets Available:</label>
+          <input type="number" id="ticketsAvailable" [(ngModel)]="event.ticketsAvailable" name="ticketsAvailable" required>
+        </div>
+        <button type="submit">Create</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="background-container"></div>
+<div class="event-list">
+  <h1>Event List</h1>
+  <a [routerLink]="['/create']">Create Event</a>
+  <div *ngIf="events.length > 0; else noEvents">
+    <ul>
+      <li *ngFor="let event of events">
+        <div class="event-links">
+          <a [routerLink]="['/event', event._id]">View Event</a>
+          <a [routerLink]="['/edit', event._id]">Edit Event</a>
+          <a [routerLink]="['/delete', event._id]">Delete Event</a>
+        </div>
+        <p>{{ event.date | date }}</p>
+        <p>{{ event.location }}</p>
+        <p>{{ event.description }}</p>
+        <p>{{ event.feedback }}</p>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noEvents>
+    <p class="no-events">No events available.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,84 @@
+/* Styles for the background container */
+.background-container {
+    background-image: url('../assets/image/view.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 20px;
+    height: 100vh; 
+    box-sizing: border-box; 
+}
+/* Styles for the inner div (content container) */
+.background-container > div {
+    max-width: 600px; /* Adjust based on your preference */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.39); /* Semi-transparent white background for readability */
+}
+
+/* Heading styles */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #242424;
+}
+
+/* Paragraph and list styles */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #333333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+strong {
+    color: #333;
+}
+
+/* Link styles */
+a {
+    display: inline-block;
+    padding: 8px 12px;
+    color: white;
+    background-color: #007bffe1;
+    text-decoration: none;
+    border: 2px solid transparent;
+    margin-right: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: chocolate;
+}
+
+/* Loading text styles */
+ng-template p {
+    font-size: 1rem;
+    color: #999;
+}

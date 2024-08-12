@@ -1,0 +1,16 @@
+
+<div>
+    <h4>Leave Feedback</h4>
+    <form (submit)="submitFeedback()">
+      <div>
+        <label for="user">Name:</label>
+        <input type="text" id="user" [(ngModel)]="user" name="user" required>
+      </div>
+      <div>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" [(ngModel)]="comment" name="comment" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

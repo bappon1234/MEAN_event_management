@@ -1,0 +1,26 @@
+<html>
+<body>
+  <div class="background-container">
+<div *ngIf="event">
+    <h2>{{ event.tittle }}</h2>
+    <p>{{ event.description }}</p>
+    <p>Date: {{ event.date | date }}</p>
+    <p>Location: {{ event.location }}</p>
+    <p>Tickets Available: {{ event.ticketsAvailable }}</p>
+    <p>Tickets Sold: {{ event.ticketsSold }}</p>
+    <h3>Feedback</h3>
+    <ul>
+      <li *ngFor="let fb of event.feedback">
+        <strong>{{ fb.user }}</strong>: {{ fb.comment }}
+      </li>
+    </ul>
+    <app-event-feedback [eventId]="event._id"(feedbackSubmitted)="onFeedbackSubmitted()"></app-event-feedback>
+    <a [routerLink]="['/event']">View Details</a>
+    <ng-template #loading>
+      <p>loading event details...</p>
+    </ng-template>
+    
+  </div>
+  </div>
+</body>
+</html>
